@@ -1,0 +1,1913 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westwood Institute for Anxiety Disorders | OCD, BDD & Anxiety Treatment in Los Angeles</title>
+    <meta
+      name="description"
+      content="Westwood Institute for Anxiety Disorders specializes in evidence-based treatment for OCD, Body Dysmorphic Disorder, PTSD, and Anxiety Disorders in Los Angeles."
+    />
+    <style>
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+:root {
+  --oxford-50: #f8fafc;
+  --oxford-100: #f1f5f9;
+  --oxford-200: #e2e8f0;
+  --oxford-300: #cbd5e1;
+  --oxford-400: #94a3b8;
+  --oxford-500: #64748b;
+  --oxford-600: #475569;
+  --oxford-700: #334155;
+  --oxford-800: #1e293b;
+  --oxford-900: #0f172a;
+  --teal-50: #f0fdfa;
+  --teal-100: #ccfbf1;
+  --teal-300: #5eead4;
+  --teal-400: #2dd4bf;
+  --teal-500: #14b8a6;
+  --teal-600: #0d9488;
+  --teal-700: #0f766e;
+  --white: #ffffff;
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  letter-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--oxford-900);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-body);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) auto minmax(330px, 1fr);
+  align-items: center;
+  gap: 28px;
+  min-height: 104px;
+  padding: 0 56px;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+  backdrop-filter: blur(18px);
+}
+
+.brand {
+  display: inline-flex;
+  flex-direction: column;
+  justify-self: start;
+  color: var(--oxford-900);
+}
+
+.brand-title {
+  font-family: var(--font-heading);
+  font-size: 33px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.brand-subtitle {
+  margin-top: 6px;
+  color: var(--oxford-500);
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 58px;
+  padding: 0 18px;
+  border-radius: 30px;
+  color: var(--oxford-700);
+  font-size: 22px;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: var(--teal-50);
+  color: var(--teal-700);
+}
+
+.nav-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 340px;
+  padding: 18px 0;
+  background: var(--white);
+  border: 1px solid var(--oxford-100);
+  border-radius: 18px;
+  box-shadow: 0 24px 44px rgba(15, 23, 42, 0.14);
+  opacity: 0;
+  transform: translateY(8px);
+  visibility: hidden;
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+}
+
+.nav-item:hover .nav-menu,
+.nav-item:focus-within .nav-menu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.nav-menu a {
+  display: block;
+  padding: 14px 24px;
+  color: var(--oxford-600);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  background: var(--teal-50);
+  color: var(--teal-700);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+}
+
+.phone-link {
+  color: var(--oxford-600);
+  font-size: 21px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.mobile-menu-button {
+  display: none;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 46px;
+  padding: 0 28px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background: var(--teal-500);
+  color: var(--white);
+  box-shadow: 0 14px 30px rgba(13, 148, 136, 0.25);
+}
+
+.button-primary:hover {
+  background: var(--teal-600);
+}
+
+.button-dark {
+  background: var(--oxford-900);
+  color: var(--white);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.15);
+}
+
+.button-outline,
+.button-ghost {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.34);
+  color: var(--white);
+}
+
+.button-outline {
+  background: var(--white);
+  border-color: var(--oxford-200);
+  color: var(--oxford-700);
+}
+
+.button-wide {
+  min-width: 360px;
+}
+
+.button-full {
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  min-height: 820px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--white);
+  text-align: center;
+}
+
+.hero-media,
+.hero-media img,
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(90deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.58), rgba(15, 23, 42, 0.18)),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.18), rgba(15, 23, 42, 0.72));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(900px, calc(100% - 48px));
+  padding-top: 10px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 45px;
+  padding: 0 24px;
+  margin: 0 0 42px;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 86px;
+  font-weight: 700;
+  line-height: 0.98;
+}
+
+.hero h1 span {
+  color: var(--teal-400);
+}
+
+.hero-copy {
+  max-width: 820px;
+  margin: 28px auto 52px;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 25px;
+  line-height: 1.45;
+}
+
+.hero-actions,
+.cta-actions,
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.hero-actions .button {
+  min-height: 50px;
+  font-size: 20px;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 44px;
+  margin-top: 52px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.hero-stats span::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 12px;
+  border-radius: 999px;
+  background: var(--teal-400);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 30px;
+  height: 48px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  transform: translateX(-50%);
+}
+
+.scroll-indicator span {
+  display: block;
+  width: 6px;
+  height: 6px;
+  margin: 12px auto 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.section {
+  padding: 126px 56px;
+}
+
+.section-soft {
+  background: var(--oxford-50);
+}
+
+.section-heading {
+  width: min(1120px, 100%);
+  margin: 0 auto 90px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: var(--teal-600);
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.section-heading h2,
+.story-copy h2,
+.cta-band h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.section-heading p:not(.eyebrow) {
+  max-width: 1110px;
+  margin: 28px auto 0;
+  color: var(--oxford-600);
+  font-size: 27px;
+  line-height: 1.55;
+}
+
+.feature-grid,
+.condition-grid,
+.resource-grid {
+  width: min(1760px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px;
+}
+
+.feature-card,
+.condition-card,
+.resource-card {
+  min-height: 360px;
+  padding: 52px;
+  border: 1px solid var(--oxford-200);
+  border-radius: 34px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.03);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.feature-card:hover,
+.condition-card:hover,
+.resource-card:hover,
+.program-card:hover,
+.publication-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--teal-100);
+  box-shadow: 0 24px 50px rgba(13, 148, 136, 0.08);
+}
+
+.icon-box {
+  display: inline-flex;
+  width: 78px;
+  height: 78px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 42px;
+  border-radius: 20px;
+  background: var(--teal-50);
+  color: var(--teal-600);
+}
+
+.icon-box svg {
+  width: 32px;
+  height: 32px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.feature-card h3,
+.condition-card h3,
+.program-card h3,
+.publication-card h3,
+.resource-card h3 {
+  margin: 0 0 22px;
+  font-family: var(--font-heading);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.feature-card p,
+.condition-card p,
+.resource-card p {
+  margin: 0;
+  color: var(--oxford-600);
+  font-size: 23px;
+  line-height: 1.55;
+}
+
+.condition-card {
+  min-height: 370px;
+  background: var(--white);
+}
+
+.condition-card.is-active {
+  border-color: var(--teal-300);
+  box-shadow: 0 20px 42px rgba(13, 148, 136, 0.12);
+}
+
+.condition-card > span:not(.icon-box) {
+  display: inline-flex;
+  margin-top: 28px;
+  color: var(--teal-600);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.detail-card {
+  width: min(1160px, 100%);
+  margin: -38px auto 54px;
+  display: flex;
+  gap: 28px;
+  padding: 34px;
+  border: 1px solid var(--teal-100);
+  border-radius: 28px;
+  background: var(--white);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+}
+
+.detail-card .icon-box {
+  margin-bottom: 0;
+  flex: 0 0 auto;
+}
+
+.detail-card h3 {
+  margin: 0 0 12px;
+  font-family: var(--font-heading);
+  font-size: 34px;
+}
+
+.detail-card p {
+  margin: 0;
+  color: var(--oxford-600);
+  font-size: 20px;
+}
+
+.split-layout {
+  width: min(1760px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 52px;
+  align-items: start;
+}
+
+.image-panel {
+  overflow: hidden;
+  border-radius: 34px;
+  box-shadow: 0 26px 50px rgba(15, 23, 42, 0.08);
+}
+
+.image-panel img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.program-list,
+.publication-list {
+  display: grid;
+  gap: 26px;
+}
+
+.program-card,
+.publication-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 26px;
+  align-items: start;
+  min-height: 148px;
+  padding: 34px;
+  border: 1px solid var(--oxford-100);
+  border-radius: 28px;
+  background: var(--white);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.program-card.is-active {
+  border-color: var(--teal-300);
+  background: var(--teal-50);
+}
+
+.program-card .icon-box,
+.publication-card .icon-box {
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  background: var(--oxford-50);
+  color: var(--oxford-500);
+}
+
+.program-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+.program-card h3 span {
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: var(--teal-100);
+  color: var(--teal-700);
+  font-family: var(--font-body);
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.program-card p,
+.publication-card p {
+  margin: 0 0 12px;
+  color: var(--oxford-500);
+  font-size: 21px;
+  line-height: 1.45;
+}
+
+.program-card small {
+  color: var(--oxford-400);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.program-card > b {
+  color: var(--teal-600);
+  font-size: 24px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.program-card:hover > b {
+  opacity: 1;
+}
+
+.leader-card {
+  width: min(1760px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.98fr) minmax(0, 1fr);
+  overflow: hidden;
+  border: 1px solid var(--oxford-100);
+  border-radius: 34px;
+  background: var(--white);
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.06);
+}
+
+.leader-image {
+  min-height: 620px;
+  overflow: hidden;
+}
+
+.leader-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.leader-copy {
+  padding: 92px 78px;
+}
+
+.leader-copy h3 {
+  margin: 0 0 14px;
+  font-family: var(--font-heading);
+  font-size: 58px;
+  line-height: 1.05;
+}
+
+.leader-title,
+.leader-copy p {
+  color: var(--oxford-600);
+  font-size: 22px;
+  line-height: 1.55;
+}
+
+.leader-title {
+  margin-bottom: 34px;
+}
+
+.tag-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 34px 0;
+}
+
+.tag-row span {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--oxford-100);
+  color: var(--oxford-600);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.testimonial-stage {
+  width: min(1500px, 100%);
+  min-height: 560px;
+  margin: 0 auto;
+  padding: 90px 120px;
+  border: 1px solid var(--oxford-200);
+  border-radius: 48px;
+  background: var(--white);
+  box-shadow: 0 28px 48px rgba(15, 23, 42, 0.08);
+  text-align: center;
+}
+
+.quote-mark {
+  color: var(--teal-300);
+  font-family: var(--font-heading);
+  font-size: 86px;
+  line-height: 0.8;
+}
+
+.testimonial-stage blockquote {
+  margin: 44px 0;
+  color: var(--oxford-900);
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-style: italic;
+  line-height: 1.28;
+}
+
+.testimonial-author {
+  margin: 0;
+  color: var(--oxford-900);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.testimonial-desc {
+  margin: 8px 0 0;
+  color: var(--oxford-500);
+  font-size: 20px;
+}
+
+.testimonial-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  margin-top: 52px;
+}
+
+.testimonial-controls button {
+  width: 62px;
+  height: 62px;
+  border: 1px solid var(--oxford-200);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--oxford-700);
+  font-size: 36px;
+  cursor: pointer;
+}
+
+.dots {
+  display: flex;
+  gap: 12px;
+}
+
+.dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--oxford-300);
+}
+
+.dots span.active {
+  width: 40px;
+  background: var(--teal-600);
+}
+
+.research-image {
+  margin-bottom: 34px;
+}
+
+.publication-card {
+  min-height: 138px;
+  align-items: center;
+}
+
+.publication-card h3 {
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+.publication-card > span {
+  color: var(--oxford-400);
+  font-size: 26px;
+}
+
+.page-hero {
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: var(--white);
+}
+
+.page-hero-media,
+.page-hero-media img,
+.page-hero-media div {
+  position: absolute;
+  inset: 0;
+}
+
+.page-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-hero-media div {
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.56), rgba(15, 23, 42, 0.1));
+}
+
+.page-hero-copy {
+  position: relative;
+  z-index: 1;
+  width: min(760px, calc(100% - 56px));
+  margin-left: 10%;
+}
+
+.page-hero h1 {
+  margin: 0 0 24px;
+  font-family: var(--font-heading);
+  font-size: 70px;
+  line-height: 1;
+}
+
+.page-hero p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 25px;
+}
+
+.story-copy {
+  padding: 40px 0;
+}
+
+.story-copy h2 {
+  font-size: 52px;
+}
+
+.story-copy p:not(.eyebrow) {
+  color: var(--oxford-600);
+  font-size: 22px;
+  line-height: 1.65;
+}
+
+.timeline-card {
+  padding: 54px;
+  border: 1px solid var(--oxford-100);
+  border-radius: 34px;
+  background: var(--oxford-50);
+}
+
+.timeline-card p {
+  margin: 0;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--oxford-200);
+  color: var(--oxford-600);
+  font-size: 22px;
+}
+
+.timeline-card p:last-child {
+  border-bottom: 0;
+}
+
+.timeline-card strong {
+  display: inline-block;
+  min-width: 92px;
+  color: var(--teal-600);
+}
+
+.resource-card span {
+  display: inline-flex;
+  margin-bottom: 30px;
+  color: var(--teal-600);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.faq-list {
+  width: min(1050px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+
+.faq-item {
+  padding: 28px 32px;
+  border: 1px solid var(--oxford-100);
+  border-radius: 20px;
+  background: var(--white);
+}
+
+.faq-item summary {
+  color: var(--oxford-900);
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.faq-item p {
+  margin: 18px 0 0;
+  color: var(--oxford-600);
+  font-size: 20px;
+}
+
+.contact-layout {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.78fr 1fr;
+  gap: 42px;
+}
+
+.contact-card,
+.contact-form,
+.thank-you {
+  padding: 42px;
+  border: 1px solid var(--oxford-100);
+  border-radius: 28px;
+  background: var(--white);
+  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.04);
+}
+
+.contact-card h3,
+.thank-you h3 {
+  margin: 0 0 24px;
+  font-family: var(--font-heading);
+  font-size: 34px;
+}
+
+.contact-card p,
+.thank-you p {
+  color: var(--oxford-600);
+  font-size: 20px;
+}
+
+.form-row {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.form-row label {
+  color: var(--oxford-700);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  width: 100%;
+  border: 1px solid var(--oxford-200);
+  border-radius: 16px;
+  background: var(--oxford-50);
+  color: var(--oxford-900);
+  font-size: 17px;
+  padding: 14px 16px;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: 2px solid var(--teal-100);
+  border-color: var(--teal-400);
+}
+
+.cta-band {
+  position: relative;
+  overflow: hidden;
+  padding: 150px 32px;
+  background: linear-gradient(135deg, var(--oxford-900), var(--oxford-800), #123d42);
+  color: var(--white);
+  text-align: center;
+}
+
+.cta-dot-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0);
+  background-size: 64px 64px;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.cta-band h2 {
+  color: var(--white);
+  font-size: 68px;
+}
+
+.cta-band p {
+  max-width: 900px;
+  margin: 34px auto 54px;
+  color: var(--oxford-300);
+  font-size: 26px;
+  line-height: 1.45;
+}
+
+.cta-phone {
+  display: inline-flex;
+  align-items: center;
+  color: var(--oxford-300);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.site-footer {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr 1fr;
+  gap: 60px;
+  padding: 82px 56px 44px;
+  background: #0b1324;
+  color: var(--white);
+}
+
+.footer-column {
+  display: grid;
+  align-content: start;
+  gap: 22px;
+}
+
+.footer-brand h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 32px;
+}
+
+.footer-brand p,
+.footer-column a,
+.footer-column span {
+  margin: 0;
+  color: var(--oxford-300);
+  font-size: 20px;
+}
+
+.footer-column h3 {
+  margin: 0 0 14px;
+  font-family: var(--font-heading);
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1280px) {
+  .site-header {
+    grid-template-columns: 1fr auto;
+    gap: 18px;
+    padding: 18px 24px;
+  }
+
+  .mobile-menu-button {
+    display: inline-flex;
+    justify-self: end;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding: 0 18px;
+    border: 1px solid var(--oxford-200);
+    border-radius: 999px;
+    background: var(--white);
+    color: var(--oxford-800);
+    font-weight: 800;
+  }
+
+  .main-nav {
+    display: none;
+    grid-column: 1 / -1;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .nav-link {
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .nav-menu {
+    position: static;
+    min-width: 0;
+    padding: 8px 0;
+    box-shadow: none;
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+
+  .header-actions {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 980px) {
+  .site-header {
+    min-height: auto;
+  }
+
+  .brand-title {
+    font-size: 27px;
+  }
+
+  .brand-subtitle {
+    font-size: 13px;
+  }
+
+  .header-actions {
+    display: none;
+  }
+
+  .hero {
+    min-height: 720px;
+  }
+
+  .hero h1,
+  .section-heading h2,
+  .cta-band h2 {
+    font-size: 52px;
+  }
+
+  .hero-copy,
+  .section-heading p:not(.eyebrow),
+  .cta-band p {
+    font-size: 21px;
+  }
+
+  .button-wide {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .section {
+    padding: 88px 22px;
+  }
+
+  .feature-grid,
+  .condition-grid,
+  .resource-grid,
+  .split-layout,
+  .leader-card,
+  .contact-layout,
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card,
+  .condition-card,
+  .resource-card {
+    min-height: auto;
+    padding: 34px;
+  }
+
+  .testimonial-stage {
+    min-height: auto;
+    padding: 54px 28px;
+  }
+
+  .testimonial-stage blockquote {
+    font-size: 28px;
+  }
+
+  .leader-image {
+    min-height: 460px;
+  }
+
+  .leader-copy {
+    padding: 42px 28px;
+  }
+
+  .leader-copy h3,
+  .page-hero h1 {
+    font-size: 44px;
+  }
+
+  .program-card,
+  .publication-card {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    padding: 64px 28px;
+  }
+}
+
+</style>
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#/" data-route="/">
+        <span class="brand-title">Westwood Institute</span>
+        <span class="brand-subtitle">For Anxiety Disorders</span>
+      </a>
+
+      <button class="mobile-menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+        Menu
+      </button>
+
+      <nav class="main-nav" id="main-nav">
+        <a class="nav-link" href="#/" data-route="/">Home</a>
+
+        <div class="nav-item">
+          <a class="nav-link has-menu" href="#/about" data-route="/about">About <span aria-hidden="true">⌄</span></a>
+          <div class="nav-menu">
+            <a href="#/about/dr-gorbis" data-route="/about/dr-gorbis">About Dr. Eda Gorbis</a>
+            <a href="#/team" data-route="/team">Our Team</a>
+            <a href="#/faq" data-route="/faq">FAQ</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-link has-menu" href="#/conditions" data-route="/conditions">What We Treat <span aria-hidden="true">⌄</span></a>
+          <div class="nav-menu">
+            <a href="#/conditions/ocd" data-route="/conditions/ocd">OCD</a>
+            <a href="#/conditions/bdd" data-route="/conditions/bdd">Body Dysmorphic Disorder</a>
+            <a href="#/conditions/ptsd" data-route="/conditions/ptsd">PTSD</a>
+            <a href="#/conditions/anxiety" data-route="/conditions/anxiety">Anxiety Disorders</a>
+            <a href="#/conditions/panic-disorder" data-route="/conditions/panic-disorder">Panic Disorder</a>
+            <a href="#/conditions/social-anxiety" data-route="/conditions/social-anxiety">Social Anxiety</a>
+            <a href="#/conditions/health-anxiety" data-route="/conditions/health-anxiety">Health Anxiety</a>
+            <a href="#/conditions/hoarding" data-route="/conditions/hoarding">Hoarding</a>
+            <a href="#/conditions/trichotillomania" data-route="/conditions/trichotillomania">Trichotillomania</a>
+            <a href="#/conditions/skin-picking" data-route="/conditions/skin-picking">Skin Picking</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-link has-menu" href="#/programs" data-route="/programs">Programs <span aria-hidden="true">⌄</span></a>
+          <div class="nav-menu">
+            <a href="#/programs/what-is-iop" data-route="/programs/what-is-iop">What is an IOP Program?</a>
+            <a href="#/programs/intensive" data-route="/programs/intensive">3-Week Intensive (IOP)</a>
+            <a href="#/programs/twice-weekly" data-route="/programs/twice-weekly">Twice-Weekly Program</a>
+            <a href="#/programs/assessments" data-route="/programs/assessments">Comprehensive Assessments</a>
+            <a href="#/programs/individual-therapy" data-route="/programs/individual-therapy">Individual Therapy</a>
+            <a href="#/programs/telehealth" data-route="/programs/telehealth">Telehealth</a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="#/research" data-route="/research">Research</a>
+        <a class="nav-link" href="#/resources" data-route="/resources">Resources</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="button button-primary header-button" href="#/contact" data-route="/contact">Schedule Assessment</a>
+        <a class="phone-link" href="tel:3104430031">☎ (310) 443-0031</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero route-section" data-home-section data-route-section="/">
+        <div class="hero-media" aria-hidden="true">
+          <img
+            src="https://media.base44.com/images/public/6a42c537595a9f9d3c1f8d2e/cf74036f4_generated_bc83c849.png"
+            alt=""
+          />
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+          <p class="hero-badge">Expert Treatment for OCD, PTSD & BDD in Los Angeles</p>
+          <h1>Hope Starts <span>Here</span></h1>
+          <p class="hero-copy">
+            Westwood Institute specializes in personalized, evidence-based care for individuals living with
+            Obsessive-Compulsive Disorder (OCD), Post-Traumatic Stress Disorder (PTSD), and Body Dysmorphic Disorder (BDD).
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary button-wide" href="#/contact" data-route="/contact">Schedule an Assessment <span>→</span></a>
+            <a class="button button-ghost" href="#/programs" data-route="/programs">Explore Our Programs</a>
+          </div>
+          <div class="hero-stats">
+            <span>30+ Years of Experience</span>
+            <span>70% Improvement Rate</span>
+          </div>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true"><span></span></div>
+      </section>
+
+      <section class="section why-section" data-home-section>
+        <div class="section-heading">
+          <p class="eyebrow">Why Choose WIAD</p>
+          <h2>A Legacy of Clinical Excellence</h2>
+          <p>
+            The Westwood Institute combines decades of specialized expertise with compassionate,
+            evidence-based care to deliver one of the highest success rates in the country.
+          </p>
+        </div>
+        <div class="feature-grid" id="why-grid"></div>
+      </section>
+
+      <section class="section section-soft conditions-section route-section" data-home-section data-route-section="/conditions">
+        <div class="section-heading">
+          <p class="eyebrow">Conditions We Treat</p>
+          <h2>Specialized Expertise in Complex Disorders</h2>
+          <p>
+            We treat the full spectrum of OCD and anxiety-related conditions, with particular expertise in severe,
+            treatment-resistant, and complex cases.
+          </p>
+        </div>
+        <div class="condition-detail" id="condition-detail" hidden></div>
+        <div class="condition-grid" id="condition-grid"></div>
+      </section>
+
+      <section class="section programs-section route-section" data-home-section data-route-section="/programs">
+        <div class="section-heading">
+          <p class="eyebrow">Treatment Programs</p>
+          <h2>Evidence-Based Programs Tailored to You</h2>
+          <p>
+            From intensive outpatient programs to flexible telehealth options, we offer a range of treatment formats
+            to meet your needs.
+          </p>
+        </div>
+        <div class="split-layout">
+          <div class="image-panel">
+            <img
+              src="https://media.base44.com/images/public/6a42c537595a9f9d3c1f8d2e/59d745a1a_generated_0c1eefbe.png"
+              alt="Modern therapy consultation room with natural light"
+            />
+          </div>
+          <div class="program-list" id="program-list"></div>
+        </div>
+      </section>
+
+      <section class="section section-soft team-section route-section" data-home-section data-route-section="/team /about/dr-gorbis">
+        <div class="section-heading">
+          <p class="eyebrow">Meet the Team</p>
+          <h2>Led by World-Renowned Experts</h2>
+          <p>
+            Our clinicians bring decades of specialized training and a deep commitment to helping patients overcome
+            even the most challenging cases.
+          </p>
+        </div>
+        <div class="leader-card">
+          <div class="leader-image">
+            <img
+              src="https://media.base44.com/images/public/6a42c537595a9f9d3c1f8d2e/d11a88bd0_generated_6eb42d59.png"
+              alt="Dr. Eda Gorbis, Director and Founder"
+            />
+          </div>
+          <div class="leader-copy">
+            <p class="eyebrow">Director & Founder</p>
+            <h3>Eda Gorbis, PhD, LMFT</h3>
+            <p class="leader-title">Adjunct Clinical Assistant Professor of Psychiatry & Biobehavioral Sciences, USC Keck School of Medicine</p>
+            <p>
+              Dr. Gorbis is a world-renowned authority on the treatment and research of Obsessive-Compulsive Disorder.
+              She trained under Dr. Edna B. Foa, the pioneer of ERP therapy, and worked with Dr. Jeffrey Schwartz at UCLA,
+              creator of the Four-Step Cognitive Behavioral Self-Treatment method.
+            </p>
+            <p>
+              She successfully synthesized these approaches to establish the Westwood Institute, achieving one of the
+              highest success rates for OCD treatment in the United States.
+            </p>
+            <div class="tag-row">
+              <span>OCD</span><span>BDD</span><span>ERP</span><span>CBT</span><span>PTSD</span><span>Anxiety</span>
+            </div>
+            <div class="button-row">
+              <a class="button button-dark" href="#/team" data-route="/team">View Full Team <span>→</span></a>
+              <a class="button button-outline" href="#/contact" data-route="/contact">Inquire with Dr. Gorbis</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft stories-section" data-home-section>
+        <div class="section-heading">
+          <p class="eyebrow">Success Stories</p>
+          <h2>Voices of Recovery</h2>
+          <p>
+            From professional colleagues to patients who have walked the path to recovery, hear what they say about the
+            Westwood Institute.
+          </p>
+        </div>
+        <div class="testimonial-stage">
+          <div class="quote-mark" aria-hidden="true">”</div>
+          <blockquote id="testimonial-quote"></blockquote>
+          <p class="testimonial-author" id="testimonial-author"></p>
+          <p class="testimonial-desc" id="testimonial-desc"></p>
+        </div>
+        <div class="testimonial-controls" id="testimonial-controls"></div>
+      </section>
+
+      <section class="section research-section route-section" data-home-section data-route-section="/research">
+        <div class="section-heading">
+          <p class="eyebrow">Research & Publications</p>
+          <h2>Advancing the Science of Recovery</h2>
+          <p>
+            Dr. Gorbis and the WIAD team contribute to the growing body of evidence-based knowledge on OCD, BDD,
+            and related disorders.
+          </p>
+        </div>
+        <div class="split-layout research-layout">
+          <div>
+            <div class="image-panel research-image">
+              <img
+                src="https://media.base44.com/images/public/6a42c537595a9f9d3c1f8d2e/3ff3faf5d_generated_3db99786.png"
+                alt="Medical journal and research materials on a desk"
+              />
+            </div>
+            <a class="button button-dark button-full" href="#/research" data-route="/research">View All Publications <span>→</span></a>
+          </div>
+          <div class="publication-list" id="publication-list"></div>
+        </div>
+      </section>
+
+      <section class="page-hero about-page route-section" data-route-section="/about">
+        <div class="page-hero-media" aria-hidden="true">
+          <img
+            src="https://media.base44.com/images/public/6a42c537595a9f9d3c1f8d2e/ea8707d59_generated_0ea08241.png"
+            alt=""
+          />
+          <div></div>
+        </div>
+        <div class="page-hero-copy">
+          <p class="eyebrow">About the Institute</p>
+          <h1>Three Decades of Healing</h1>
+          <p>
+            Founded in 1997, the Westwood Institute for Anxiety Disorders has been a beacon of hope for individuals
+            suffering from severe OCD and related conditions.
+          </p>
+        </div>
+      </section>
+
+      <section class="section route-section about-story" data-route-section="/about">
+        <div class="split-layout">
+          <div class="story-copy">
+            <p class="eyebrow">Our Story</p>
+            <h2>Built Around Specialized Care</h2>
+            <p>
+              The Westwood Institute for Anxiety Disorders was founded in response to the lack of expertise and
+              successful treatment options for Obsessive-Compulsive Disorder. Dr. Gorbis developed an intensive
+              treatment approach grounded in ERP, CBT, and mindful awareness.
+            </p>
+            <p>
+              Since then, the Institute has helped patients from across the United States and internationally pursue
+              recovery through structured, evidence-based treatment.
+            </p>
+          </div>
+          <div class="timeline-card">
+            <p><strong>1994</strong> Training with Dr. Edna Foa</p>
+            <p><strong>1997</strong> Westwood Institute founded</p>
+            <p><strong>1999</strong> UCLA School of Medicine appointment</p>
+            <p><strong>Present</strong> Ongoing research, treatment, and education</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section resources-section route-section" data-route-section="/resources">
+        <div class="section-heading">
+          <p class="eyebrow">Educational Resources</p>
+          <h2>Learn More About Recovery</h2>
+          <p>Explore educational material on OCD, the Four-Step Method, and evidence-based care.</p>
+        </div>
+        <div class="resource-grid">
+          <a class="resource-card" href="#/resources/about-ocd" data-route="/resources/about-ocd">
+            <span>01</span>
+            <h3>About OCD</h3>
+            <p>Understand symptoms, treatment options, and the role of ERP therapy.</p>
+          </a>
+          <a class="resource-card" href="#/resources/four-steps" data-route="/resources/four-steps">
+            <span>02</span>
+            <h3>The Four-Step Method</h3>
+            <p>Learn about mindful awareness and cognitive behavioral self-treatment tools.</p>
+          </a>
+          <a class="resource-card" href="#/research" data-route="/research">
+            <span>03</span>
+            <h3>Research & Publications</h3>
+            <p>Read featured articles, webinars, and conference resources.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="section faq-section route-section" data-route-section="/faq">
+        <div class="section-heading">
+          <p class="eyebrow">Frequently Asked Questions</p>
+          <h2>Questions Before Starting</h2>
+          <p>Here are a few common questions about treatment, scheduling, and getting started.</p>
+        </div>
+        <div class="faq-list" id="faq-list"></div>
+      </section>
+
+      <section class="section contact-section route-section" data-route-section="/contact">
+        <div class="section-heading">
+          <p class="eyebrow">Contact Us</p>
+          <h2>Schedule an Assessment</h2>
+          <p>Send a confidential inquiry and our team will follow up with next steps.</p>
+        </div>
+        <div class="contact-layout">
+          <div class="contact-card">
+            <h3>Westwood Institute</h3>
+            <p>921 Westwood Blvd, Suite 223<br />Los Angeles, CA 90024</p>
+            <p>8617 Wilshire Blvd<br />Beverly Hills, CA 90211</p>
+            <p><a href="tel:3104430031">(310) 443-0031</a></p>
+            <p><a href="mailto:thewestwoodinstitute@gmail.com">thewestwoodinstitute@gmail.com</a></p>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+            <div class="form-row">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" />
+            </div>
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject">
+                <option value="assessment">Assessment</option>
+                <option value="general_inquiry">General inquiry</option>
+                <option value="program_info">Program information</option>
+                <option value="insurance">Insurance</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button class="button button-primary button-full" type="submit">Send Message</button>
+          </form>
+          <div class="thank-you" id="thank-you" hidden>
+            <h3>Thank you. Your message has been received.</h3>
+            <p>Our team will review your inquiry and follow up soon. In the meantime, you can explore more about our work.</p>
+            <div class="button-row">
+              <a class="button button-dark" href="#/research" data-route="/research">Read Our Research</a>
+              <a class="button button-outline" href="#/resources" data-route="/resources">Educational Resources</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band" data-shared-section>
+        <div class="cta-dot-grid" aria-hidden="true"></div>
+        <div class="cta-content">
+          <h2>Begin Your Path to Recovery</h2>
+          <p>
+            Take the first step toward freedom from OCD and anxiety disorders. Our expert team is ready to create a
+            personalized treatment plan for you.
+          </p>
+          <div class="cta-actions">
+            <a class="button button-primary button-wide" href="#/contact" data-route="/contact">Schedule an Assessment <span>→</span></a>
+            <a class="cta-phone" href="tel:3104430031">☎ (310) 443-0031</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" data-shared-section>
+      <div class="footer-column footer-brand">
+        <h2>Westwood Institute</h2>
+        <p>For Anxiety Disorders</p>
+        <a href="tel:3104430031">☎ (310) 443-0031</a>
+        <a href="mailto:thewestwoodinstitute@gmail.com">✉ thewestwoodinstitute@gmail.com</a>
+        <span>921 Westwood Blvd, Suite 223<br />Los Angeles, CA 90024</span>
+        <span>8617 Wilshire Blvd</span>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <a href="#/about" data-route="/about">About the Institute</a>
+        <a href="#/conditions" data-route="/conditions">Conditions We Treat</a>
+        <a href="#/programs" data-route="/programs">Treatment Programs</a>
+        <a href="#/team" data-route="/team">Meet the Team</a>
+        <a href="#/research" data-route="/research">Research & Publications</a>
+      </div>
+      <div class="footer-column">
+        <h3>Conditions</h3>
+        <a href="#/conditions/ocd" data-route="/conditions/ocd">OCD Treatment</a>
+        <a href="#/conditions/bdd" data-route="/conditions/bdd">Body Dysmorphic Disorder</a>
+        <a href="#/conditions/ptsd" data-route="/conditions/ptsd">PTSD Treatment</a>
+        <a href="#/conditions/anxiety" data-route="/conditions/anxiety">Anxiety Disorders</a>
+        <a href="#/conditions/panic-disorder" data-route="/conditions/panic-disorder">Panic Disorder</a>
+      </div>
+      <div class="footer-column">
+        <h3>Programs</h3>
+        <a href="#/programs/intensive" data-route="/programs/intensive">3-Week Intensive Program</a>
+        <a href="#/programs/twice-weekly" data-route="/programs/twice-weekly">Twice-Weekly Program</a>
+        <a href="#/programs/assessments" data-route="/programs/assessments">Comprehensive Assessments</a>
+        <a href="#/programs/individual-therapy" data-route="/programs/individual-therapy">Individual Therapy</a>
+        <a href="#/programs/telehealth" data-route="/programs/telehealth">Telehealth Sessions</a>
+      </div>
+    </footer>
+
+    <script type="module">
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+
+const icons = {
+  award: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21l4-3 4 3v-6H8v6z"/><circle cx="12" cy="8" r="5"/></svg>`,
+  clock: `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>`,
+  brain: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5a3 3 0 0 0-3 3v1a3 3 0 0 0 0 6v1a3 3 0 0 0 5 2.2V5.8A3 3 0 0 0 9 5z"/><path d="M15 5a3 3 0 0 1 3 3v1a3 3 0 0 1 0 6v1a3 3 0 0 1-5 2.2V5.8A3 3 0 0 1 15 5z"/></svg>`,
+  stethoscope: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4v5a4 4 0 0 0 8 0V4"/><path d="M10 13v2a5 5 0 0 0 10 0v-1"/><circle cx="20" cy="10" r="2"/></svg>`,
+  heart: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 8.5c0 5-8.5 10-8.5 10s-8.5-5-8.5-10A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 8.5 2.5z"/></svg>`,
+  book: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21V5.5z"/><path d="M4 5.5V21"/></svg>`,
+  eye: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>`,
+  shield: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/></svg>`,
+  flame: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-4-3-6-5-9-.5 3-2.5 4-4 5-1.5-2-1-4 0-7-4 3-6 7-6 11a7 7 0 0 0 8 7z"/></svg>`,
+  users: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg>`,
+  box: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/></svg>`,
+  scissors: `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.5 15.5"/><path d="M14 14l6 6"/><path d="M8.5 8.5L12 12"/></svg>`,
+  hand: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 11V5a2 2 0 0 1 4 0v6"/><path d="M12 11V4a2 2 0 0 1 4 0v8"/><path d="M16 12V7a2 2 0 0 1 4 0v8a7 7 0 0 1-7 7h-1a8 8 0 0 1-8-8v-3a2 2 0 0 1 4 0z"/></svg>`,
+  calendar: `<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>`,
+  video: `<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="13" height="10" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></svg>`,
+};
+
+const whyReasons = [
+  { icon: "award", title: "30+ Years of Excellence", desc: "Founded in 1994, with roots in pioneering OCD research at UCLA since the early 1990s." },
+  { icon: "clock", title: "Intensive Treatment Programs", desc: "Immersive individually tailored programs designed for severe and treatment-resistant cases." },
+  { icon: "brain", title: "ERP Specialists", desc: "Trained in Dr. Edna Foa's Exposure and Response Prevention protocol, the gold standard for OCD treatment." },
+  { icon: "stethoscope", title: "Psychiatry Integration", desc: "Comprehensive psychopharmacological management combined with behavioral therapy for optimal outcomes." },
+  { icon: "heart", title: "Medical Collaboration", desc: "Academic affiliations with USC Keck School of Medicine and UCLA School of Medicine." },
+  { icon: "book", title: "Research-Based Care", desc: "Active contributions to scientific literature and ongoing refinement of treatment methods." },
+];
+
+const conditions = [
+  { name: "OCD", slug: "ocd", icon: "brain", desc: "Recurrent obsessions and compulsions treated with intensive ERP and the Four-Step Method.", full: "Our OCD treatment focuses on carefully structured exposure and response prevention, mindful awareness, and one-on-one support for people facing severe or treatment-resistant symptoms." },
+  { name: "Body Dysmorphic Disorder", slug: "bdd", icon: "eye", desc: "Excessive preoccupation with perceived appearance flaws treated with specialized CBT and ERP.", full: "BDD care combines specialized CBT, exposure work, and innovative clinical strategies for appearance-related distress and compulsive checking or reassurance seeking." },
+  { name: "PTSD", slug: "ptsd", icon: "shield", desc: "Trauma-focused care using evidence-based exposure therapy and cognitive behavioral techniques.", full: "PTSD treatment is tailored with trauma-informed exposure and cognitive behavioral approaches designed to reduce avoidance and restore daily functioning." },
+  { name: "Anxiety Disorders", slug: "anxiety", icon: "flame", desc: "Comprehensive treatment for generalized anxiety using CBT and behavioral interventions.", full: "Treatment for anxiety disorders is built around practical skill-building, behavioral interventions, and individualized care for symptoms that interfere with work, relationships, or school." },
+  { name: "Panic Disorder", slug: "panic-disorder", icon: "heart", desc: "Targeted therapy for panic attacks and agoraphobia using exposure-based approaches.", full: "Panic disorder treatment addresses fear of bodily sensations, avoidance patterns, and agoraphobia through targeted exposure-based care." },
+  { name: "Social Anxiety", slug: "social-anxiety", icon: "users", desc: "Evidence-based treatment for fear of social situations and performance anxiety.", full: "Social anxiety treatment uses gradual exposure, skills practice, and CBT to help patients re-enter avoided social or performance situations." },
+  { name: "Health Anxiety", slug: "health-anxiety", icon: "heart", desc: "Specialized care for illness anxiety and somatic symptom disorders.", full: "Health anxiety care helps patients reduce reassurance cycles, body scanning, and fear-driven checking through structured CBT and exposure." },
+  { name: "Hoarding", slug: "hoarding", icon: "box", desc: "Structured intervention for compulsive hoarding with graduated exposure and behavioral strategies.", full: "Hoarding treatment supports decision-making, organization, and gradual behavior change with compassionate clinical structure." },
+  { name: "Trichotillomania", slug: "trichotillomania", icon: "scissors", desc: "Treatment for compulsive hair pulling using habit reversal training and behavioral therapy.", full: "Trichotillomania care may include habit reversal training, stimulus control, and CBT strategies to reduce pulling urges." },
+  { name: "Skin Picking", slug: "skin-picking", icon: "hand", desc: "Specialized approach to excoriation disorder combining behavioral and cognitive techniques.", full: "Skin picking treatment combines behavioral tools, awareness training, and targeted strategies to reduce repetitive picking cycles." },
+];
+
+const programs = [
+  { name: "3-Week Intensive Program", slug: "intensive", icon: "calendar", duration: "3 weeks", tag: "Most Popular", desc: "Our flagship immersive program integrating ERP and the Four-Step Method for severe OCD cases. One-on-one sessions daily with a dedicated therapist." },
+  { name: "Twice-Weekly Program", slug: "twice-weekly", icon: "clock", duration: "8 weeks", desc: "A semi-intensive program accommodating professionals and busy individuals who need flexible scheduling while maintaining effective treatment." },
+  { name: "Comprehensive Assessments", slug: "assessments", icon: "stethoscope", duration: "Varies", desc: "Thorough clinical evaluation using scientifically validated rating scales including the Y-BOCS and specialized diagnostic tools." },
+  { name: "Individual Therapy", slug: "individual-therapy", icon: "users", duration: "Ongoing", desc: "Personalized one-on-one sessions with an ERP specialist tailored to your unique presentation and goals." },
+  { name: "Telehealth Sessions", slug: "telehealth", icon: "video", duration: "Flexible", desc: "Secure virtual therapy sessions for patients who cannot attend in person, maintaining the same evidence-based approach." },
+];
+
+const testimonials = [
+  { quote: "Dr. Eda Gorbis is a seasoned expert in helping people overcome OCD and related problems. Her expert team helps even the toughest cases.", author: "Leading OCD Researcher", desc: "Professional Colleague" },
+  { quote: "Her approach is compassionate, caring, intense and fast. Clients who stay with the program experience positive changes and improved mood.", author: "Clinical Peer Review", desc: "Professional Endorsement" },
+  { quote: "After years of struggling with OCD and trying many different therapists, I finally found a program that understood what recovery required.", author: "Former Patient", desc: "3-Week Intensive Program Graduate" },
+  { quote: "The team at WIAD understood my BDD in a way no one else had. Dr. Gorbis and her innovative techniques gave me the tools to see myself clearly for the first time in years. I am forever grateful.", author: "Former Patient", desc: "BDD Treatment Graduate" },
+];
+
+const publications = [
+  { title: "Bridging Mind and Body", venue: "ADAA Conference Blog", year: "2023", url: "https://adaa.org/learn-from-us/from-the-experts/blog-posts/conference/bridging-mind-body" },
+  { title: "BDD - Surgeons and Surgery Considerations", venue: "ADAA Expert Blog", year: "2022", url: "https://adaa.org/learn-from-us/from-the-experts/blog-posts/consumer/bdd-surgeons-and-surgery-considerations" },
+  { title: "Body Dysmorphic Disorder: Disease of Self-Perceived Ugliness", venue: "ADAA Professional Webinar", year: "2021", url: "https://adaa.org/webinar/professional/body-dysmorphic-disorder-disease-self-perceived-ugliness-and-its-relationship" },
+  { title: "Interplay Between PTSD and OCD: Treatment Considerations", venue: "ADAA Professional Webinar", year: "2020", url: "https://adaa.org/webinar/professional/interplay-between-ptsd-and-ocd-treatment-considerations-and-tactics" },
+];
+
+const faqs = [
+  { question: "What is ERP therapy?", answer: "Exposure and Response Prevention is an evidence-based treatment that helps patients face feared triggers while reducing compulsive responses." },
+  { question: "Do you offer telehealth?", answer: "Yes. Telehealth may be available for appropriate patients while preserving the same evidence-based treatment approach." },
+  { question: "How do I begin?", answer: "Start by scheduling an assessment. The clinical team will help determine the right level of care and program format." },
+  { question: "Do you treat severe cases?", answer: "Yes. The Institute has particular experience with severe, complex, and treatment-resistant OCD and anxiety-related conditions." },
+];
+
+const legacyRoutes = {
+  home: "/",
+  about: "/about",
+  conditions: "/conditions",
+  programs: "/programs",
+  research: "/research",
+  resources: "/resources",
+  faq: "/faq",
+  contact: "/contact",
+  team: "/team",
+  "dr-gorbis": "/about/dr-gorbis",
+  "condition-ocd": "/conditions/ocd",
+  "condition-bdd": "/conditions/bdd",
+  "condition-ptsd": "/conditions/ptsd",
+  "condition-anxiety": "/conditions/anxiety",
+  "program-intensive": "/programs/intensive",
+  "program-twice-weekly": "/programs/twice-weekly",
+};
+
+const routeAliases = {
+  "/programs/what-is-iop": "/programs/intensive",
+  "/resources/about-ocd": "/resources",
+  "/resources/four-steps": "/resources",
+};
+
+function icon(name) {
+  return `<span class="icon-box">${icons[name] || icons.book}</span>`;
+}
+
+function getRoute() {
+  const rawHash = decodeURIComponent(window.location.hash.replace(/^#/, ""));
+  if (!rawHash || rawHash === "/") return "/";
+  if (!rawHash.startsWith("/")) return routeAliases[legacyRoutes[rawHash] || `/${rawHash}`] || legacyRoutes[rawHash] || `/${rawHash}`;
+  return routeAliases[rawHash] || rawHash;
+}
+
+function parentRoute(route) {
+  if (route.startsWith("/conditions/")) return "/conditions";
+  if (route.startsWith("/programs/")) return "/programs";
+  return route;
+}
+
+function renderWhy() {
+  const target = document.querySelector("#why-grid");
+  target.innerHTML = whyReasons.map((item) => `
+    <article class="feature-card">
+      ${icon(item.icon)}
+      <h3>${item.title}</h3>
+      <p>${item.desc}</p>
+    </article>
+  `).join("");
+}
+
+function renderConditions(activeSlug) {
+  const detail = document.querySelector("#condition-detail");
+  const selected = conditions.find((condition) => condition.slug === activeSlug);
+  detail.hidden = !selected;
+  if (selected) {
+    detail.innerHTML = `
+      <div class="detail-card">
+        ${icon(selected.icon)}
+        <div>
+          <p class="eyebrow">Condition Focus</p>
+          <h3>${selected.name}</h3>
+          <p>${selected.full}</p>
+        </div>
+      </div>
+    `;
+  }
+
+  document.querySelector("#condition-grid").innerHTML = conditions.map((condition) => `
+    <a class="condition-card ${condition.slug === activeSlug ? "is-active" : ""}" href="#/conditions/${condition.slug}" data-route="/conditions/${condition.slug}">
+      ${icon(condition.icon)}
+      <h3>${condition.name}</h3>
+      <p>${condition.desc}</p>
+      <span>Learn More <b>→</b></span>
+    </a>
+  `).join("");
+}
+
+function renderPrograms(activeSlug) {
+  document.querySelector("#program-list").innerHTML = programs.map((program) => `
+    <a class="program-card ${program.slug === activeSlug ? "is-active" : ""}" href="#/programs/${program.slug}" data-route="/programs/${program.slug}">
+      ${icon(program.icon)}
+      <div>
+        <h3>${program.name}${program.tag ? `<span>${program.tag}</span>` : ""}</h3>
+        <p>${program.desc}</p>
+        <small>${program.duration}</small>
+      </div>
+      <b>→</b>
+    </a>
+  `).join("");
+}
+
+let testimonialIndex = 3;
+function renderTestimonials() {
+  const testimonial = testimonials[testimonialIndex];
+  document.querySelector("#testimonial-quote").textContent = `"${testimonial.quote}"`;
+  document.querySelector("#testimonial-author").textContent = testimonial.author;
+  document.querySelector("#testimonial-desc").textContent = testimonial.desc;
+  document.querySelector("#testimonial-controls").innerHTML = `
+    <button type="button" data-testimonial-prev aria-label="Previous testimonial">‹</button>
+    <div class="dots">
+      ${testimonials.map((_, index) => `<span class="${index === testimonialIndex ? "active" : ""}"></span>`).join("")}
+    </div>
+    <button type="button" data-testimonial-next aria-label="Next testimonial">›</button>
+  `;
+}
+
+function renderPublications() {
+  document.querySelector("#publication-list").innerHTML = publications.map((pub) => `
+    <a class="publication-card" href="${pub.url}" target="_blank" rel="noopener noreferrer">
+      ${icon("book")}
+      <div>
+        <h3>${pub.title}</h3>
+        <p>${pub.venue} · ${pub.year}</p>
+      </div>
+      <span aria-hidden="true">↗</span>
+    </a>
+  `).join("");
+}
+
+function renderFaqs() {
+  document.querySelector("#faq-list").innerHTML = faqs.map((faq) => `
+    <details class="faq-item">
+      <summary>${faq.question}</summary>
+      <p>${faq.answer}</p>
+    </details>
+  `).join("");
+}
+
+function showRoute() {
+  const route = getRoute();
+  const sectionRoute = parentRoute(route);
+  const activeCondition = route.startsWith("/conditions/") ? route.split("/").pop() : "";
+  const activeProgram = route.startsWith("/programs/") ? route.split("/").pop() : "";
+
+  renderConditions(activeCondition);
+  renderPrograms(activeProgram);
+
+  const isHome = route === "/";
+  document.querySelectorAll("[data-home-section], [data-route-section]").forEach((section) => {
+    const routes = (section.dataset.routeSection || "").split(/\s+/).filter(Boolean);
+    const visible = isHome
+      ? section.hasAttribute("data-home-section")
+      : routes.includes(route) || routes.includes(sectionRoute);
+    section.hidden = !visible;
+  });
+
+  document.querySelectorAll("[data-route]").forEach((link) => {
+    const linkRoute = routeAliases[link.dataset.route] || link.dataset.route;
+    const active = linkRoute === "/"
+      ? route === "/"
+      : route === linkRoute || sectionRoute === linkRoute || route.startsWith(`${linkRoute}/`);
+    link.classList.toggle("active", active);
+  });
+
+  document.querySelector("#main-nav").classList.remove("open");
+  document.querySelector(".mobile-menu-button").setAttribute("aria-expanded", "false");
+  window.scrollTo({ top: 0, behavior: "instant" });
+}
+
+function setupMobileNav() {
+  const button = document.querySelector(".mobile-menu-button");
+  const nav = document.querySelector("#main-nav");
+  button.addEventListener("click", () => {
+    const nextState = !nav.classList.contains("open");
+    nav.classList.toggle("open", nextState);
+    button.setAttribute("aria-expanded", String(nextState));
+  });
+}
+
+function setupTestimonials() {
+  document.addEventListener("click", (event) => {
+    if (event.target.closest("[data-testimonial-prev]")) {
+      testimonialIndex = (testimonialIndex - 1 + testimonials.length) % testimonials.length;
+      renderTestimonials();
+    }
+    if (event.target.closest("[data-testimonial-next]")) {
+      testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+      renderTestimonials();
+    }
+  });
+}
+
+function setupContactForm() {
+  const form = document.querySelector("#contact-form");
+  const thankYou = document.querySelector("#thank-you");
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const button = form.querySelector("button[type='submit']");
+    const originalText = button.textContent;
+    button.disabled = true;
+    button.textContent = "Sending...";
+
+    if (FORMSPREE_ENDPOINT.includes("YOUR_FORM_ID")) {
+      form.hidden = true;
+      thankYou.hidden = false;
+      return;
+    }
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(form),
+      });
+      if (!response.ok) throw new Error("Form submission failed");
+      form.reset();
+      form.hidden = true;
+      thankYou.hidden = false;
+    } catch {
+      button.disabled = false;
+      button.textContent = originalText;
+      alert("The message could not be sent. Please email thewestwoodinstitute@gmail.com or call (310) 443-0031.");
+    }
+  });
+}
+
+renderWhy();
+renderConditions("");
+renderPrograms("");
+renderTestimonials();
+renderPublications();
+renderFaqs();
+setupMobileNav();
+setupTestimonials();
+setupContactForm();
+showRoute();
+
+window.addEventListener("hashchange", showRoute);
+
+</script>
+  </body>
+</html>
