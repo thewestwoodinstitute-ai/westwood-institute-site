@@ -68,11 +68,11 @@ a {
   top: 0;
   z-index: 100;
   display: grid;
-  grid-template-columns: minmax(260px, 1fr) auto minmax(330px, 1fr);
+  grid-template-columns: minmax(230px, 1fr) auto minmax(290px, 1fr);
   align-items: center;
-  gap: 28px;
-  min-height: 104px;
-  padding: 0 56px;
+  gap: 22px;
+  min-height: 82px;
+  padding: 0 36px;
   background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid rgba(226, 232, 240, 0.9);
   box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
@@ -88,15 +88,15 @@ a {
 
 .brand-title {
   font-family: var(--font-heading);
-  font-size: 33px;
+  font-size: 27px;
   font-weight: 700;
   line-height: 1;
 }
 
 .brand-subtitle {
-  margin-top: 6px;
+  margin-top: 4px;
   color: var(--oxford-500);
-  font-size: 17px;
+  font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -115,12 +115,12 @@ a {
 .nav-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  height: 58px;
-  padding: 0 18px;
+  gap: 6px;
+  height: 42px;
+  padding: 0 12px;
   border-radius: 30px;
   color: var(--oxford-700);
-  font-size: 22px;
+  font-size: 15px;
   font-weight: 600;
   transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -135,11 +135,11 @@ a {
   position: absolute;
   left: 0;
   top: 100%;
-  min-width: 340px;
-  padding: 18px 0;
+  min-width: 270px;
+  padding: 12px 0;
   background: var(--white);
   border: 1px solid var(--oxford-100);
-  border-radius: 18px;
+  border-radius: 14px;
   box-shadow: 0 24px 44px rgba(15, 23, 42, 0.14);
   opacity: 0;
   transform: translateY(8px);
@@ -156,9 +156,9 @@ a {
 
 .nav-menu a {
   display: block;
-  padding: 14px 24px;
+  padding: 10px 18px;
   color: var(--oxford-600);
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
 }
 
@@ -172,12 +172,12 @@ a {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 18px;
+  gap: 12px;
 }
 
 .phone-link {
   color: var(--oxford-600);
-  font-size: 21px;
+  font-size: 15px;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -213,6 +213,12 @@ a {
 
 .button-primary:hover {
   background: var(--teal-600);
+}
+
+.header-button {
+  min-height: 40px;
+  padding: 0 18px;
+  font-size: 14px;
 }
 
 .button-dark {
