@@ -70,9 +70,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  min-height: 82px;
-  padding: 0 clamp(24px, 3vw, 48px);
+  gap: clamp(14px, 1.5vw, 24px);
+  min-height: 78px;
+  padding: 0 clamp(16px, 2vw, 36px);
   background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid rgba(226, 232, 240, 0.9);
   box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
@@ -89,17 +89,19 @@ a {
 
 .brand-title {
   font-family: var(--font-heading);
-  font-size: 27px;
+  font-size: 25px;
   font-weight: 700;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .brand-subtitle {
   margin-top: 4px;
   color: var(--oxford-500);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .main-nav {
@@ -107,7 +109,7 @@ a {
   flex: 1 1 auto;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 4px;
   min-width: 0;
 }
 
@@ -118,13 +120,14 @@ a {
 .nav-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  height: 42px;
-  padding: 0 12px;
+  gap: 5px;
+  height: 40px;
+  padding: 0 10px;
   border-radius: 30px;
   color: var(--oxford-700);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
+  white-space: nowrap;
   transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -176,12 +179,12 @@ a {
   flex: 0 0 auto;
   align-items: center;
   justify-content: flex-end;
-  gap: 12px;
+  gap: 10px;
 }
 
 .phone-link {
   color: var(--oxford-600);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -220,9 +223,9 @@ a {
 }
 
 .header-button {
-  min-height: 40px;
-  padding: 0 18px;
-  font-size: 14px;
+  min-height: 38px;
+  padding: 0 16px;
+  font-size: 13px;
 }
 
 .button-dark {
@@ -1233,6 +1236,12 @@ a {
   display: inline-flex;
   margin-top: 28px;
   margin-bottom: 0;
+}
+
+@media (max-width: 1500px) {
+  .phone-link {
+    display: none;
+  }
 }
 
 @media (max-width: 1280px) {
