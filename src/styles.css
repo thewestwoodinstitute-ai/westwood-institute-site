@@ -67,12 +67,12 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(230px, 1fr) auto minmax(290px, 1fr);
   align-items: center;
-  justify-content: space-between;
-  gap: clamp(14px, 1.5vw, 24px);
-  min-height: 78px;
-  padding: 0 clamp(16px, 2vw, 36px);
+  gap: 22px;
+  min-height: 82px;
+  padding: 0 36px;
   background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid rgba(226, 232, 240, 0.9);
   box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
@@ -82,35 +82,30 @@ a {
 .brand {
   display: inline-flex;
   flex-direction: column;
-  flex: 0 0 auto;
   justify-self: start;
   color: var(--oxford-900);
 }
 
 .brand-title {
   font-family: var(--font-heading);
-  font-size: 25px;
+  font-size: 27px;
   font-weight: 700;
   line-height: 1;
-  white-space: nowrap;
 }
 
 .brand-subtitle {
   margin-top: 4px;
   color: var(--oxford-500);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
-  white-space: nowrap;
 }
 
 .main-nav {
   display: flex;
-  flex: 1 1 auto;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  min-width: 0;
+  gap: 8px;
 }
 
 .nav-item {
@@ -120,14 +115,13 @@ a {
 .nav-link {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  height: 40px;
-  padding: 0 10px;
+  gap: 6px;
+  height: 42px;
+  padding: 0 12px;
   border-radius: 30px;
   color: var(--oxford-700);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
-  white-space: nowrap;
   transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -176,15 +170,14 @@ a {
 
 .header-actions {
   display: flex;
-  flex: 0 0 auto;
   align-items: center;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 12px;
 }
 
 .phone-link {
   color: var(--oxford-600);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -223,9 +216,9 @@ a {
 }
 
 .header-button {
-  min-height: 38px;
-  padding: 0 16px;
-  font-size: 13px;
+  min-height: 40px;
+  padding: 0 18px;
+  font-size: 14px;
 }
 
 .button-dark {
@@ -1238,15 +1231,8 @@ a {
   margin-bottom: 0;
 }
 
-@media (max-width: 1500px) {
-  .phone-link {
-    display: none;
-  }
-}
-
 @media (max-width: 1280px) {
   .site-header {
-    display: grid;
     grid-template-columns: 1fr auto;
     gap: 18px;
     padding: 18px 24px;
