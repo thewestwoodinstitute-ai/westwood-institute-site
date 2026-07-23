@@ -23,6 +23,536 @@
   --font-body: "Inter", Arial, sans-serif;
 }
 
+/* Program detail overview card polish */
+.ww-program-overview-grid {
+  align-items: start;
+}
+
+.ww-program-overview-card {
+  box-sizing: border-box;
+  align-self: start;
+  min-height: 0 !important;
+  height: auto !important;
+  overflow: visible;
+  border-color: rgba(153, 246, 228, 0.9) !important;
+  background: linear-gradient(135deg, rgba(240, 253, 250, 0.9) 0%, #fff 72%) !important;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.035);
+  padding: clamp(1.55rem, 2.7vw, 2.15rem) !important;
+}
+
+.ww-program-overview-card p {
+  max-width: 64rem;
+  line-height: 1.74;
+  margin: 0;
+  overflow: visible;
+}
+
+.ww-program-overview-card h2 {
+  margin-bottom: 1rem;
+}
+
+.ww-program-fit-card {
+  align-self: start;
+  min-height: 0;
+  height: auto;
+}
+
+@media (max-width: 640px) {
+  .ww-program-overview-card {
+    padding: 1.3rem !important;
+    border-radius: 1.35rem;
+  }
+
+  .ww-program-overview-card p {
+    font-size: 1rem;
+    line-height: 1.68;
+  }
+}
+
+/* What We Treat symptoms checklist polish */
+.ww-condition-page .ww-condition-checklist {
+  background: linear-gradient(135deg, rgba(240, 253, 250, 0.88) 0%, rgba(248, 250, 252, 0.96) 100%) !important;
+  border-color: rgba(153, 246, 228, 0.78) !important;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.04);
+  padding: clamp(1.85rem, 3.5vw, 2.65rem) !important;
+}
+
+.ww-condition-page .ww-condition-checklist-grid {
+  gap: 1.05rem 2.65rem;
+}
+
+.ww-condition-page .ww-condition-check-item {
+  gap: 0.95rem;
+}
+
+.ww-condition-page .ww-condition-check-item p {
+  line-height: 1.58;
+  padding: 0.05rem 0;
+}
+
+@media (max-width: 640px) {
+  .ww-condition-page .ww-condition-checklist {
+    padding: 1.4rem !important;
+  }
+
+  .ww-condition-page .ww-condition-checklist-grid {
+    gap: 1rem;
+  }
+}
+
+/* Shared What We Treat page system */
+.ww-condition-page {
+  background: #fff;
+  color: #0f172a;
+}
+
+.ww-condition-hero {
+  padding: clamp(3.75rem, 7vw, 6rem) 0 clamp(2.25rem, 5vw, 3.75rem);
+  background: linear-gradient(180deg, #f8fafc 0%, #fff 82%);
+  scroll-margin-top: 96px;
+}
+
+.ww-condition-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.ww-condition-intro {
+  max-width: 860px;
+}
+
+.ww-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  width: max-content;
+  margin-bottom: 1.35rem;
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.ww-back-link:hover,
+.ww-back-link:focus-visible {
+  color: #0f766e;
+}
+
+.ww-condition-eyebrow {
+  display: block;
+  margin-bottom: 0.65rem;
+  color: #0d9488;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.ww-condition-hero-title {
+  margin: 0 0 1rem;
+  color: #0f172a;
+  font-family: var(--font-heading);
+  font-size: clamp(2.75rem, 6vw, 4.75rem);
+  font-weight: 600;
+  line-height: 1.02;
+}
+
+.ww-condition-hero-copy {
+  max-width: 780px;
+  margin: 0;
+  color: #475569;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  line-height: 1.65;
+}
+
+.ww-condition-section {
+  padding: clamp(2rem, 4.5vw, 3.4rem) 0;
+  background: #fff;
+  scroll-margin-top: 96px;
+}
+
+.ww-condition-section--soft {
+  background: linear-gradient(180deg, #f8fafc 0%, #fff 100%);
+}
+
+.ww-condition-section + .ww-condition-section {
+  border-top: 1px solid rgba(226, 232, 240, 0.75);
+}
+
+.ww-condition-heading {
+  max-width: 760px;
+  margin-bottom: clamp(1.15rem, 2.4vw, 1.8rem);
+}
+
+.ww-condition-title {
+  margin: 0;
+  color: #0f172a;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.ww-condition-copy {
+  max-width: 760px;
+  display: grid;
+  gap: 1rem;
+  color: #475569;
+  font-size: clamp(1rem, 1.4vw, 1.125rem);
+  line-height: 1.72;
+}
+
+.ww-condition-copy p {
+  margin: 0;
+}
+
+.ww-about-copy {
+  max-width: 860px;
+  padding-left: 1.35rem;
+  border-left: 3px solid rgba(20, 184, 166, 0.32);
+}
+
+.ww-condition-checklist,
+.ww-condition-resource-card,
+.ww-condition-point-card,
+.ww-condition-treatment-card {
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.03);
+}
+
+.ww-condition-checklist {
+  max-width: 1000px;
+  border-radius: 1.5rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.ww-condition-checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.95rem 2.25rem;
+}
+
+.ww-condition-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  min-width: 0;
+}
+
+.ww-condition-check-item p {
+  margin: 0;
+  color: #334155;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.ww-condition-check-icon {
+  margin-top: 0.1rem;
+  display: flex;
+  height: 1.55rem;
+  width: 1.55rem;
+  flex: 0 0 1.55rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(20, 184, 166, 0.35);
+  border-radius: 0.55rem;
+  background: rgba(240, 253, 250, 0.95);
+  color: #0f766e;
+}
+
+.ww-condition-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.ww-condition-point-card {
+  border-radius: 1.25rem;
+  padding: 1.35rem;
+}
+
+.ww-condition-point-number {
+  margin-bottom: 0.65rem;
+  color: #0d9488;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.ww-condition-point-card p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.58;
+}
+
+.ww-condition-treatment {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.25fr);
+  gap: 1.25rem;
+  align-items: start;
+  max-width: 1080px;
+}
+
+.ww-condition-treatment-copy {
+  padding: 1.25rem 0;
+}
+
+.ww-condition-treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.ww-condition-treatment-card {
+  min-width: 0;
+  border-radius: 1.2rem;
+  background: #f8fafc;
+  padding: 1.15rem;
+}
+
+.ww-condition-treatment-icon {
+  display: flex;
+  height: 2.25rem;
+  width: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+  border-radius: 0.8rem;
+  background: #ccfbf1;
+  color: #0f766e;
+}
+
+.ww-condition-treatment-card p {
+  margin: 0;
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.52;
+}
+
+.ww-condition-related-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  max-width: 900px;
+}
+
+.ww-condition-related-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  border: 1px solid rgba(203, 213, 225, 0.9);
+  border-radius: 999px;
+  background: #fff;
+  padding: 0.65rem 1rem;
+  color: #334155;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.ww-condition-related-link:hover,
+.ww-condition-related-link:focus-visible {
+  border-color: rgba(20, 184, 166, 0.45);
+  background: #f0fdfa;
+  color: #0f766e;
+  transform: translateY(-1px);
+}
+
+.ww-condition-resources {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.ww-condition-resource-card {
+  border-radius: 1.35rem;
+  padding: 1.35rem;
+}
+
+.ww-condition-resource-card h3 {
+  margin: 0;
+  color: #0f172a;
+  font-family: var(--font-heading);
+  font-size: 1.28rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.ww-condition-resource-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.ww-condition-resource-link {
+  display: block;
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: 1rem;
+  background: #f8fafc;
+  padding: 1rem;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.ww-condition-resource-link:hover,
+.ww-condition-resource-link:focus-visible {
+  border-color: rgba(20, 184, 166, 0.42);
+  background: #f0fdfa;
+}
+
+.ww-condition-resource-link > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.ww-condition-resource-link span {
+  color: #1e293b;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.ww-condition-resource-link svg {
+  flex: 0 0 auto;
+  margin-top: 0.15rem;
+  color: #94a3b8;
+}
+
+.ww-condition-resource-link:hover svg,
+.ww-condition-resource-link:focus-visible svg {
+  color: #0d9488;
+}
+
+.ww-condition-resource-link p {
+  margin: 0.45rem 0 0;
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+/* Condition page card fit adjustments */
+.ww-condition-page .ww-about-copy {
+  box-sizing: border-box;
+  max-width: 1000px;
+  width: 100%;
+  overflow: visible;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-left: 4px solid rgba(20, 184, 166, 0.42);
+  border-radius: 1.5rem;
+  background: #fff;
+  padding: clamp(1.5rem, 3vw, 2.15rem);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.035);
+}
+
+.ww-condition-page .ww-condition-copy {
+  max-width: 100%;
+  overflow: visible;
+}
+
+.ww-condition-page .ww-condition-copy p {
+  overflow: visible;
+  padding: 0.08rem 0;
+  line-height: 1.78;
+}
+
+.ww-condition-page .ww-condition-checklist,
+.ww-condition-page .ww-condition-resource-card,
+.ww-condition-page .ww-condition-point-card,
+.ww-condition-page .ww-condition-treatment-card {
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.ww-condition-page .ww-condition-checklist {
+  padding: clamp(1.6rem, 3.2vw, 2.35rem);
+}
+
+.ww-condition-page .ww-condition-treatment-card,
+.ww-condition-page .ww-condition-point-card,
+.ww-condition-page .ww-condition-resource-card {
+  padding: clamp(1.35rem, 2.3vw, 1.75rem);
+}
+
+@media (min-width: 640px) {
+  .ww-condition-shell {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ww-condition-shell {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .ww-condition-treatment {
+    grid-template-columns: 1fr;
+  }
+
+  .ww-condition-treatment-copy {
+    padding: 0;
+  }
+
+  .ww-condition-treatment-grid,
+  .ww-condition-points {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .ww-condition-hero {
+    padding: 2.75rem 0 2rem;
+  }
+
+  .ww-condition-section {
+    padding: 2rem 0;
+  }
+
+  .ww-condition-checklist-grid,
+  .ww-condition-treatment-grid,
+  .ww-condition-points,
+  .ww-condition-resources {
+    grid-template-columns: 1fr;
+  }
+
+  .ww-about-copy {
+    padding-left: 1rem;
+  }
+
+  .ww-condition-checklist,
+  .ww-condition-resource-card,
+  .ww-condition-point-card,
+  .ww-condition-treatment-card {
+    border-radius: 1.1rem;
+  }
+
+  .ww-condition-related-link {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .ww-condition-title {
+    font-size: 2rem;
+  }
+
+  .ww-condition-page .ww-about-copy {
+    padding: 1.25rem;
+    border-radius: 1.1rem;
+  }
+
+  .ww-condition-page .ww-condition-checklist {
+    padding: 1.25rem;
+  }
+}
+
 * {
   box-sizing: border-box;
   letter-spacing: 0;
@@ -434,6 +964,57 @@ a {
   background: rgba(255, 255, 255, 0.76);
   box-shadow: 0 18px 42px rgba(15, 23, 42, 0.03);
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.featured-videos {
+  width: min(1760px, 100%);
+  margin: 0 auto 48px;
+  padding: 44px;
+  border: 1px solid var(--oxford-200);
+  border-radius: 34px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.03);
+}
+
+.featured-videos h3 {
+  margin: 0 0 14px;
+  font-family: var(--font-heading);
+  font-size: 34px;
+  color: var(--oxford-900);
+}
+
+.featured-videos p {
+  max-width: 760px;
+  margin: 0 0 28px;
+  color: var(--oxford-600);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.featured-video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.featured-video-card h4 {
+  margin: 0 0 14px;
+  font-family: var(--font-heading);
+  font-size: 20px;
+  line-height: 1.25;
+  color: var(--oxford-900);
+}
+
+.featured-video-frame {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 24px;
+  background: var(--oxford-900);
+}
+
+.featured-video-frame iframe {
+  width: 100%;
+  height: 100%;
 }
 
 .feature-card:hover,
@@ -1331,6 +1912,7 @@ a {
 
   .feature-grid,
   .condition-grid,
+  .featured-video-grid,
   .resource-grid,
   .split-layout,
   .leader-card,
