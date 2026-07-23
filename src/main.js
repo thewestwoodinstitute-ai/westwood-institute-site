@@ -335,6 +335,48 @@ function conditionCards() {
   `).join("");
 }
 
+const featuredVideos = [
+  {
+    id: "Ees8463R1go",
+    title: "Featured Educational Video on OCD and Anxiety Treatment"
+  },
+  {
+    id: "ci1SE6qojlY",
+    title: "Featured Educational Video on Complex Anxiety Disorders"
+  },
+  {
+    id: "pW9BP0Oqeig",
+    title: "Featured Educational Video on OCD and Related Conditions"
+  }
+];
+
+function featuredVideoSection() {
+  return `
+    <section class="featured-videos" aria-labelledby="featured-videos-heading">
+      <div>
+        <h3 id="featured-videos-heading">Featured Videos</h3>
+        <p>Learn more about our specialized approach to treating complex anxiety disorders, OCD, and related conditions.</p>
+      </div>
+      <div class="featured-video-grid">
+        ${featuredVideos.map((video) => `
+          <article class="featured-video-card">
+            <div class="featured-video-frame">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/${video.id}"
+                title="${video.title}"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        `).join("")}
+      </div>
+    </section>
+  `;
+}
+
 function programCards() {
   return programs.map((program) => `
     <a class="program-card" href="#/programs/${program.slug}">
@@ -353,6 +395,7 @@ function conditionsIndex() {
   return `
     <section class="section section-soft conditions-section">
       ${sectionHeading("Conditions We Treat", "Specialized Expertise in Complex Disorders", "Explore the full spectrum of OCD and anxiety-related conditions treated at Westwood Institute.")}
+      ${featuredVideoSection()}
       <div class="condition-grid">${conditionCards()}</div>
     </section>
   `;
