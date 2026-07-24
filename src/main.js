@@ -580,7 +580,7 @@ function drGorbisPage() {
 function resourcesPage() {
   const resources = [
     ["book", "About OCD", "Understand obsessions, compulsions, avoidance, and why ERP is the gold-standard treatment.", "/conditions/ocd"],
-    ["brain", "The Four Steps", "Learn how mindful relabeling, reattribution, refocusing, and revaluing support recovery.", "/programs/intensive"],
+    ["brain", "The Four Steps", "Learn how mindful relabeling, reattribution, refocusing, and revaluing support recovery.", "/resources/four-steps"],
     ["eye", "About BDD", "Explore appearance-related obsessions, checking rituals, and specialized treatment options.", "/conditions/bdd"],
     ["calendar", "Intensive Treatment", "See how concentrated care can help when symptoms are severe or treatment-resistant.", "/programs/what-is-iop"],
   ];
@@ -590,6 +590,44 @@ function resourcesPage() {
     copy: "Explore patient-friendly resources about OCD, BDD, ERP, intensive treatment, and related anxiety disorders.",
     img: images.research,
     body: `<div class="resource-grid">${resources.map(([i, title, desc, href]) => `<a class="resource-card" href="#${href}">${icon(i)}<h3>${title}</h3><p>${desc}</p><span>Read More <b>→</b></span></a>`).join("")}</div>`,
+  });
+}
+
+function fourStepsPage() {
+  const steps = [
+    ["01", "Relabel", "Recognize intrusive thoughts and urges as obsessions and compulsions caused by OCD."],
+    ["02", "Reattribute", "Remind yourself that the intensity is part of OCD rather than a true signal that must be obeyed."],
+    ["03", "Refocus", "Redirect attention to a constructive behavior, even briefly, instead of performing the compulsion."],
+    ["04", "Revalue", "Treat OCD thoughts as false brain messages and give them less importance over time."],
+  ];
+  return contentPage({
+    eyebrow: "OCD Skills",
+    title: "Dr. Jeffrey Schwartz's Four Steps for OCD",
+    copy: "Principles from Brain Lock that explain mindful relabeling, reattribution, refocusing, and revaluing as part of OCD self-treatment education.",
+    img: images.research,
+    body: `
+      <section class="content-section">
+        <h2>A Cognitive-Biobehavioral Approach</h2>
+        <p>Dr. Schwartz's Four Steps help patients recognize obsessive thoughts and compulsive urges as symptoms of OCD rather than meaningful signals that must be obeyed.</p>
+        <p>The method can support exposure and response prevention by helping patients identify OCD symptoms, resist compulsive responses, shift attention, and lower the value placed on intrusive thoughts.</p>
+      </section>
+      <div class="resource-grid">
+        ${steps.map(([num, title, desc]) => `<article class="resource-card"><span>${num}</span><h3>${title}</h3><p>${desc}</p></article>`).join("")}
+      </div>
+      <section class="content-section">
+        <h2>Practice Tools</h2>
+        <ul>
+          <li><strong>The Fifteen-Minute Rule:</strong> Delay the ritual and observe whether the urge changes while attention is redirected.</li>
+          <li><strong>It's What You Do That Counts:</strong> Progress is built by choosing a healthier behavior rather than trying to force the thought away.</li>
+          <li><strong>Journaling:</strong> Writing down resisted urges and successful refocusing can make progress easier to see.</li>
+          <li><strong>Anticipate and Accept:</strong> Expect OCD thoughts to appear, accept their presence, and continue practicing the response plan.</li>
+        </ul>
+      </section>
+      <section class="content-section">
+        <h2>Clinical Note</h2>
+        <p>This resource is educational and is not a substitute for diagnosis or treatment by a qualified mental health professional. When OCD symptoms are severe or impairing, professional treatment is recommended.</p>
+      </section>
+    `,
   });
 }
 
@@ -710,6 +748,7 @@ function pageFor(path) {
   if (path.startsWith("/programs/")) return programPage(path.split("/").pop()) + cta();
   if (path === "/research") return researchPage() + cta();
   if (path === "/resources") return resourcesPage() + cta();
+  if (path === "/resources/four-steps") return fourStepsPage() + cta();
   if (path === "/contact") return contactPage();
   return notFound();
 }
