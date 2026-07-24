@@ -254,6 +254,53 @@
   }
 }
 
+/* Shared text scale-down for What We Treat and Program detail pages */
+.ww-condition-page .ww-condition-copy,
+.ww-condition-page .ww-about-copy p,
+.ww-condition-page .ww-condition-treatment-copy p {
+  font-size: clamp(1rem, 1.15vw, 1.08rem) !important;
+  line-height: 1.68 !important;
+}
+
+.ww-condition-page .ww-condition-check-item p,
+.ww-condition-page .ww-condition-treatment-card p,
+.ww-condition-page .ww-condition-point-card p,
+.ww-condition-page .ww-condition-resource-link p {
+  font-size: 0.96rem !important;
+  line-height: 1.5 !important;
+}
+
+.ww-condition-page .ww-condition-title {
+  font-size: clamp(2rem, 3.4vw, 3rem) !important;
+}
+
+.ww-program-overview-card p {
+  font-size: clamp(1rem, 1.15vw, 1.08rem) !important;
+  line-height: 1.68 !important;
+}
+
+.ww-program-fit-card,
+.ww-program-fit-card li,
+.ww-program-fit-card p {
+  font-size: 0.98rem !important;
+  line-height: 1.55 !important;
+}
+
+.program-detail-page p,
+.program-detail-page li {
+  font-size: clamp(1rem, 1.1vw, 1.06rem) !important;
+}
+
+@media (max-width: 640px) {
+  .ww-condition-page .ww-condition-copy,
+  .ww-condition-page .ww-about-copy p,
+  .ww-condition-page .ww-condition-treatment-copy p,
+  .ww-program-overview-card p {
+    font-size: 1rem !important;
+    line-height: 1.62 !important;
+  }
+}
+
 /* Shared What We Treat page system */
 .ww-condition-page {
   background: #fff;
